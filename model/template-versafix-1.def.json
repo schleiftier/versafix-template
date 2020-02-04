@@ -41,7 +41,7 @@
       "_category": "content",
       "_name": "Page",
       "_globalStyle": "_theme_.frameTheme",
-      "_version": "1.1.16",
+      "_version": "1.1.19",
       "type": "template",
       "_initialized": true,
       "_processedDefs": {
@@ -49,7 +49,6 @@
         "preheaderVisible": "preheaderVisible=true",
         "titleText": "titleText",
         "preheaderBlock": "preheaderBlock",
-        "sponsor": "sponsor",
         "footerBlock": "footerBlock",
         "mainBlocks": "mainBlocks"
       },
@@ -58,9 +57,6 @@
         "customStyle": false,
         "preheaderVisible": true,
         "titleText": "TITLE",
-        "sponsor.url": "",
-        "sponsor.alt": "sponsor",
-        "sponsor.src": "img/sponsor.gif",
         "mainBlocks.blocks": "[]"
       },
       "customStyle": null,
@@ -83,7 +79,7 @@
         "_initialized": true,
         "_usecount": 1
       },
-      "_usecount": 9,
+      "_usecount": 5,
       "preheaderBlock": {
         "_writeable": false,
         "_name": "Preheader Block",
@@ -96,11 +92,11 @@
             "value": "@[backgroundColor]",
             "position": {
               "start": {
-                "line": 221,
+                "line": 225,
                 "col": 28
               },
               "end": {
-                "line": 221,
+                "line": 225,
                 "col": 69
               }
             }
@@ -140,7 +136,7 @@
           "linkStyle.color": null,
           "linkStyle.size": null,
           "linkStyle.decoration": null,
-          "preheaderLinkOption": "[unsubscribe_link]",
+          "preheaderLinkOption": "[LINK_UNSUBSCRIBE]",
           "longTextStyle.align": null,
           "longTextStyle.face": null,
           "longTextStyle.color": null,
@@ -317,7 +313,7 @@
           "_writeable": false,
           "_name": "Unsubscribe Link",
           "_widget": "select",
-          "_options": "[profile_link]=Profile|[unsubscribe_link]=Unsubscribe|none=None",
+          "_options": "[profile_link]=Profile|[LINK_UNSUBSCRIBE]=Unsubscribe|none=None",
           "_help": "If -None- is selected, preHeader text will be shown",
           "_category": "content",
           "type": "preheaderLinkOption",
@@ -480,62 +476,6 @@
           "_usecount": 2
         }
       },
-      "sponsor": {
-        "_writeable": false,
-        "_name": "Sponsor",
-        "_category": "hidden",
-        "type": "sponsor",
-        "_initialized": true,
-        "_processedDefs": {
-          "visible": "visible=true",
-          "src": "src",
-          "url": "url",
-          "alt": "alt"
-        },
-        "_globalStyles": {},
-        "_defaultValues": {
-          "visible": true
-        },
-        "visible": {
-          "_writeable": false,
-          "_name": "Visible?",
-          "_widget": "boolean",
-          "_category": "content",
-          "type": "visible",
-          "_initialized": true,
-          "_usecount": 1
-        },
-        "_complex": true,
-        "src": {
-          "_writeable": false,
-          "_name": "Image",
-          "_widget": "src",
-          "_category": "content",
-          "type": "src",
-          "_initialized": true,
-          "_usecount": 1
-        },
-        "url": {
-          "_writeable": false,
-          "_name": "Link",
-          "_widget": "url",
-          "_category": "content",
-          "type": "url",
-          "_initialized": true,
-          "_usecount": 1
-        },
-        "alt": {
-          "_writeable": false,
-          "_name": "Alternative Text",
-          "_widget": "text",
-          "_help": "Alternative text will be shown on email clients that does not download image automatically",
-          "_category": "content",
-          "type": "alt",
-          "_initialized": true,
-          "_usecount": 1
-        },
-        "_usecount": 4
-      },
       "footerBlock": {
         "_writeable": false,
         "_name": "Unsubscribe Block",
@@ -548,11 +488,11 @@
             "value": "@[backgroundColor]",
             "position": {
               "start": {
-                "line": 221,
+                "line": 225,
                 "col": 28
               },
               "end": {
-                "line": 221,
+                "line": 225,
                 "col": 69
               }
             }
@@ -593,7 +533,7 @@
           "linkStyle.color": null,
           "linkStyle.size": null,
           "linkStyle.decoration": null,
-          "longText": "<p>Email sent to <a href=\"mailto:[mail]\">[mail]</a></p>",
+          "longText": "<p>Email sent to <a href=\"mailto:[EMAIL]\">[EMAIL]</a></p>",
           "disiscrivitiText": "Unsubscribe"
         },
         "customStyle": null,
@@ -1088,55 +1028,10 @@
       "_initialized": true
     },
     "sponsor": {
-      "_writeable": false,
+      "_writeable": true,
       "_name": "Sponsor",
       "_category": "hidden",
-      "type": "sponsor",
-      "_initialized": true,
-      "_processedDefs": {
-        "visible": "visible=true",
-        "src": "src",
-        "url": "url",
-        "alt": "alt"
-      },
-      "_globalStyles": {},
-      "_defaultValues": {
-        "visible": true
-      },
-      "visible": {
-        "_writeable": false,
-        "_name": "Visible?",
-        "_widget": "boolean",
-        "_category": "content",
-        "type": "visible",
-        "_initialized": true
-      },
-      "_complex": true,
-      "src": {
-        "_writeable": false,
-        "_name": "Image",
-        "_widget": "src",
-        "_category": "content",
-        "type": "src",
-        "_initialized": true
-      },
-      "url": {
-        "_writeable": false,
-        "_name": "Link",
-        "_widget": "url",
-        "_category": "content",
-        "type": "url",
-        "_initialized": true
-      },
-      "alt": {
-        "_writeable": false,
-        "_name": "Alternative Text",
-        "_widget": "text",
-        "_help": "Alternative text will be shown on email clients that does not download image automatically",
-        "_category": "content",
-        "type": "alt",
-        "_initialized": true
-      }
+      "_props": "visible=true src url alt"
     },
     "titleText": {
       "_writeable": false,
@@ -1184,7 +1079,7 @@
       "_writeable": false,
       "_name": "Unsubscribe Link",
       "_widget": "select",
-      "_options": "[profile_link]=Profile|[unsubscribe_link]=Unsubscribe|none=None",
+      "_options": "[profile_link]=Profile|[LINK_UNSUBSCRIBE]=Unsubscribe|none=None",
       "_help": "If -None- is selected, preHeader text will be shown",
       "_category": "content",
       "type": "preheaderLinkOption",
@@ -3005,7 +2900,7 @@
         "_usecount": 328
       },
       "_complex": true,
-      "_usecount": 1436,
+      "_usecount": 1438,
       "externalBackgroundColor": {
         "_writeable": false,
         "_name": "External Background",
@@ -3665,9 +3560,9 @@
           "_category": "content",
           "type": "hrHeight",
           "_initialized": true,
-          "_usecount": 2
+          "_usecount": 3
         },
-        "_usecount": 10
+        "_usecount": 12
       },
       "bigButtonStyle": {
         "_writeable": false,
@@ -3865,11 +3760,11 @@
             "value": "@['Button']",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 34
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 60
               }
             }
@@ -3880,11 +3775,11 @@
             "value": "@face",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 62
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 84
               }
             }
@@ -3895,11 +3790,11 @@
             "value": "@['black']",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 86
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 107
               }
             }
@@ -3910,11 +3805,11 @@
             "value": "@[size]px",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 109
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 133
               }
             }
@@ -3925,11 +3820,11 @@
             "value": "@['#CCCCCC']",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 135
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 169
               }
             }
@@ -3940,11 +3835,11 @@
             "value": "5px",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 171
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 188
               }
             }
@@ -3955,11 +3850,11 @@
             "value": "@[radius]px",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 190
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 220
               }
             }
@@ -4938,7 +4833,7 @@
           "_usecount": 328
         },
         "_complex": true,
-        "_usecount": 1436,
+        "_usecount": 1438,
         "externalBackgroundColor": {
           "_writeable": false,
           "_name": "External Background",
@@ -5598,9 +5493,9 @@
             "_category": "content",
             "type": "hrHeight",
             "_initialized": true,
-            "_usecount": 2
+            "_usecount": 3
           },
-          "_usecount": 10
+          "_usecount": 12
         },
         "bigButtonStyle": {
           "_writeable": false,
@@ -5798,11 +5693,11 @@
               "value": "@['Button']",
               "position": {
                 "start": {
-                  "line": 151,
+                  "line": 155,
                   "col": 34
                 },
                 "end": {
-                  "line": 151,
+                  "line": 155,
                   "col": 60
                 }
               }
@@ -5813,11 +5708,11 @@
               "value": "@face",
               "position": {
                 "start": {
-                  "line": 151,
+                  "line": 155,
                   "col": 62
                 },
                 "end": {
-                  "line": 151,
+                  "line": 155,
                   "col": 84
                 }
               }
@@ -5828,11 +5723,11 @@
               "value": "@['black']",
               "position": {
                 "start": {
-                  "line": 151,
+                  "line": 155,
                   "col": 86
                 },
                 "end": {
-                  "line": 151,
+                  "line": 155,
                   "col": 107
                 }
               }
@@ -5843,11 +5738,11 @@
               "value": "@[size]px",
               "position": {
                 "start": {
-                  "line": 151,
+                  "line": 155,
                   "col": 109
                 },
                 "end": {
-                  "line": 151,
+                  "line": 155,
                   "col": 133
                 }
               }
@@ -5858,11 +5753,11 @@
               "value": "@['#CCCCCC']",
               "position": {
                 "start": {
-                  "line": 151,
+                  "line": 155,
                   "col": 135
                 },
                 "end": {
-                  "line": 151,
+                  "line": 155,
                   "col": 169
                 }
               }
@@ -5873,11 +5768,11 @@
               "value": "5px",
               "position": {
                 "start": {
-                  "line": 151,
+                  "line": 155,
                   "col": 171
                 },
                 "end": {
-                  "line": 151,
+                  "line": 155,
                   "col": 188
                 }
               }
@@ -5888,11 +5783,11 @@
               "value": "@[radius]px",
               "position": {
                 "start": {
-                  "line": 151,
+                  "line": 155,
                   "col": 190
                 },
                 "end": {
-                  "line": 151,
+                  "line": 155,
                   "col": 220
                 }
               }
@@ -5998,11 +5893,11 @@
           "value": "@[backgroundColor]",
           "position": {
             "start": {
-              "line": 221,
+              "line": 225,
               "col": 28
             },
             "end": {
-              "line": 221,
+              "line": 225,
               "col": 69
             }
           }
@@ -6043,7 +5938,7 @@
         "linkStyle.color": null,
         "linkStyle.size": null,
         "linkStyle.decoration": null,
-        "longText": "<p>Email sent to <a href=\"mailto:[mail]\">[mail]</a></p>",
+        "longText": "<p>Email sent to <a href=\"mailto:[EMAIL]\">[EMAIL]</a></p>",
         "disiscrivitiText": "Unsubscribe"
       },
       "customStyle": null,
@@ -6421,6 +6316,22 @@
       "type": "visible",
       "_initialized": true
     },
+    "waVisible": {
+      "_writeable": false,
+      "_name": "Whatsapp",
+      "_widget": "boolean",
+      "_category": "content",
+      "type": "visible",
+      "_initialized": true
+    },
+    "tgVisible": {
+      "_writeable": false,
+      "_name": "Telegram",
+      "_widget": "boolean",
+      "_category": "content",
+      "type": "visible",
+      "_initialized": true
+    },
     "instVisible": {
       "_writeable": false,
       "_name": "Instagram",
@@ -6501,6 +6412,22 @@
       "type": "url",
       "_initialized": true
     },
+    "waUrl": {
+      "_writeable": false,
+      "_name": "Whatsapp Link",
+      "_widget": "url",
+      "_category": "content",
+      "type": "url",
+      "_initialized": true
+    },
+    "tgUrl": {
+      "_writeable": false,
+      "_name": "Telegram Link",
+      "_widget": "url",
+      "_category": "content",
+      "type": "url",
+      "_initialized": true
+    },
     "instUrl": {
       "_writeable": false,
       "_name": "Instagram Link",
@@ -6530,11 +6457,11 @@
           "value": "@[backgroundColor]",
           "position": {
             "start": {
-              "line": 221,
+              "line": 225,
               "col": 28
             },
             "end": {
-              "line": 221,
+              "line": 225,
               "col": 69
             }
           }
@@ -6554,6 +6481,10 @@
         "ggUrl": "ggUrl",
         "webVisible": "webVisible=false",
         "webUrl": "webUrl",
+        "waVisible": "waVisible=false",
+        "waUrl": "waUrl",
+        "tgVisible": "tgVisible=false",
+        "tgUrl": "tgUrl",
         "inVisible": "inVisible=false",
         "inUrl": "inUrl",
         "piVisible": "piVisible=false",
@@ -6585,6 +6516,8 @@
         "twVisible": true,
         "ggVisible": true,
         "webVisible": false,
+        "waVisible": false,
+        "tgVisible": false,
         "inVisible": false,
         "piVisible": false,
         "flVisible": false,
@@ -6601,13 +6534,15 @@
         "twUrl": "",
         "ggUrl": "",
         "webUrl": "",
+        "waUrl": "",
+        "tgUrl": "",
         "inUrl": "",
         "piUrl": "",
         "flUrl": "",
         "viUrl": "",
         "instUrl": "",
         "youUrl": "",
-        "longText": "<p>Address and <a href=\"\">Contacts</a></p>"
+        "longText": "<p>Address and <a href>Contacts</a></p>"
       },
       "customStyle": null,
       "_complex": true,
@@ -6687,6 +6622,42 @@
       "webUrl": {
         "_writeable": false,
         "_name": "Website Link",
+        "_widget": "url",
+        "_category": "content",
+        "type": "url",
+        "_initialized": true,
+        "_usecount": 2
+      },
+      "waVisible": {
+        "_writeable": false,
+        "_name": "Whatsapp",
+        "_widget": "boolean",
+        "_category": "content",
+        "type": "visible",
+        "_initialized": true,
+        "_usecount": 4
+      },
+      "waUrl": {
+        "_writeable": false,
+        "_name": "Whatsapp Link",
+        "_widget": "url",
+        "_category": "content",
+        "type": "url",
+        "_initialized": true,
+        "_usecount": 2
+      },
+      "tgVisible": {
+        "_writeable": false,
+        "_name": "Telegram",
+        "_widget": "boolean",
+        "_category": "content",
+        "type": "visible",
+        "_initialized": true,
+        "_usecount": 4
+      },
+      "tgUrl": {
+        "_writeable": false,
+        "_name": "Telegram Link",
         "_widget": "url",
         "_category": "content",
         "type": "url",
@@ -6956,7 +6927,7 @@
         "_initialized": true,
         "_usecount": 2
       },
-      "_usecount": 71,
+      "_usecount": 83,
       "id": {
         "_writeable": false,
         "_category": "content",
@@ -6987,6 +6958,10 @@
         "ggUrl": "ggUrl",
         "webVisible": "webVisible=false",
         "webUrl": "webUrl",
+        "waVisible": "waVisible=false",
+        "waUrl": "waUrl",
+        "tgVisible": "tgVisible=false",
+        "tgUrl": "tgUrl",
         "inVisible": "inVisible=true",
         "inUrl": "inUrl",
         "piVisible": "piVisible=false",
@@ -7017,6 +6992,8 @@
         "twVisible": true,
         "ggVisible": true,
         "webVisible": false,
+        "waVisible": false,
+        "tgVisible": false,
         "inVisible": true,
         "piVisible": false,
         "flVisible": false,
@@ -7030,6 +7007,8 @@
         "twUrl": "",
         "ggUrl": "",
         "webUrl": "",
+        "waUrl": "",
+        "tgUrl": "",
         "inUrl": "",
         "piUrl": "",
         "flUrl": "",
@@ -7057,7 +7036,7 @@
         "_category": "content",
         "type": "bigSocialIconSize",
         "_initialized": true,
-        "_usecount": 80
+        "_usecount": 96
       },
       "fbVisible": {
         "_writeable": false,
@@ -7125,6 +7104,42 @@
       "webUrl": {
         "_writeable": false,
         "_name": "Website Link",
+        "_widget": "url",
+        "_category": "content",
+        "type": "url",
+        "_initialized": true,
+        "_usecount": 4
+      },
+      "waVisible": {
+        "_writeable": false,
+        "_name": "Whatsapp",
+        "_widget": "boolean",
+        "_category": "content",
+        "type": "visible",
+        "_initialized": true,
+        "_usecount": 8
+      },
+      "waUrl": {
+        "_writeable": false,
+        "_name": "Whatsapp Link",
+        "_widget": "url",
+        "_category": "content",
+        "type": "url",
+        "_initialized": true,
+        "_usecount": 4
+      },
+      "tgVisible": {
+        "_writeable": false,
+        "_name": "Telegram",
+        "_widget": "boolean",
+        "_category": "content",
+        "type": "visible",
+        "_initialized": true,
+        "_usecount": 8
+      },
+      "tgUrl": {
+        "_writeable": false,
+        "_name": "Telegram Link",
         "_widget": "url",
         "_category": "content",
         "type": "url",
@@ -7387,7 +7402,7 @@
         "_initialized": true,
         "_usecount": 1
       },
-      "_usecount": 209,
+      "_usecount": 249,
       "externalBackgroundColor": {
         "_writeable": false,
         "_name": "External Background",
@@ -7444,11 +7459,11 @@
           "value": "@['Button']",
           "position": {
             "start": {
-              "line": 151,
+              "line": 155,
               "col": 34
             },
             "end": {
-              "line": 151,
+              "line": 155,
               "col": 60
             }
           }
@@ -7459,11 +7474,11 @@
           "value": "@face",
           "position": {
             "start": {
-              "line": 151,
+              "line": 155,
               "col": 62
             },
             "end": {
-              "line": 151,
+              "line": 155,
               "col": 84
             }
           }
@@ -7474,11 +7489,11 @@
           "value": "@['black']",
           "position": {
             "start": {
-              "line": 151,
+              "line": 155,
               "col": 86
             },
             "end": {
-              "line": 151,
+              "line": 155,
               "col": 107
             }
           }
@@ -7489,11 +7504,11 @@
           "value": "@[size]px",
           "position": {
             "start": {
-              "line": 151,
+              "line": 155,
               "col": 109
             },
             "end": {
-              "line": 151,
+              "line": 155,
               "col": 133
             }
           }
@@ -7504,11 +7519,11 @@
           "value": "@['#CCCCCC']",
           "position": {
             "start": {
-              "line": 151,
+              "line": 155,
               "col": 135
             },
             "end": {
-              "line": 151,
+              "line": 155,
               "col": 169
             }
           }
@@ -7519,11 +7534,11 @@
           "value": "5px",
           "position": {
             "start": {
-              "line": 151,
+              "line": 155,
               "col": 171
             },
             "end": {
-              "line": 151,
+              "line": 155,
               "col": 188
             }
           }
@@ -7534,11 +7549,11 @@
           "value": "@[radius]px",
           "position": {
             "start": {
-              "line": 151,
+              "line": 155,
               "col": 190
             },
             "end": {
-              "line": 151,
+              "line": 155,
               "col": 220
             }
           }
@@ -7735,11 +7750,11 @@
         "shareButtonStyle.buttonColor": null,
         "shareButtonStyle.color": null,
         "shareButtonStyle.iconColorType": null,
-        "fbText": "Share\r\n            ",
-        "twText": "Share\r\n            ",
-        "inText": "Share\r\n            ",
-        "ggText": "Share\r\n            ",
-        "piText": "Share\r\n            "
+        "fbText": "Share\n            ",
+        "twText": "Share\n            ",
+        "inText": "Share\n            ",
+        "ggText": "Share\n            ",
+        "piText": "Share\n            "
       },
       "customStyle": null,
       "_complex": true,
@@ -7844,11 +7859,11 @@
             "value": "@['Button']",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 34
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 60
               }
             }
@@ -7859,11 +7874,11 @@
             "value": "@face",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 62
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 84
               }
             }
@@ -7874,11 +7889,11 @@
             "value": "@['black']",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 86
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 107
               }
             }
@@ -7889,11 +7904,11 @@
             "value": "@[size]px",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 109
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 133
               }
             }
@@ -7904,11 +7919,11 @@
             "value": "@['#CCCCCC']",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 135
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 169
               }
             }
@@ -7919,11 +7934,11 @@
             "value": "5px",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 171
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 188
               }
             }
@@ -7934,11 +7949,11 @@
             "value": "@[radius]px",
             "position": {
               "start": {
-                "line": 151,
+                "line": 155,
                 "col": 190
               },
               "end": {
-                "line": 151,
+                "line": 155,
                 "col": 220
               }
             }
@@ -8088,11 +8103,11 @@
           "value": "@[backgroundColor]",
           "position": {
             "start": {
-              "line": 221,
+              "line": 225,
               "col": 28
             },
             "end": {
-              "line": 221,
+              "line": 225,
               "col": 69
             }
           }
@@ -8132,7 +8147,7 @@
         "linkStyle.color": null,
         "linkStyle.size": null,
         "linkStyle.decoration": null,
-        "preheaderLinkOption": "[unsubscribe_link]",
+        "preheaderLinkOption": "[LINK_UNSUBSCRIBE]",
         "longTextStyle.align": null,
         "longTextStyle.face": null,
         "longTextStyle.color": null,
@@ -8309,7 +8324,7 @@
         "_writeable": false,
         "_name": "Unsubscribe Link",
         "_widget": "select",
-        "_options": "[profile_link]=Profile|[unsubscribe_link]=Unsubscribe|none=None",
+        "_options": "[profile_link]=Profile|[LINK_UNSUBSCRIBE]=Unsubscribe|none=None",
         "_help": "If -None- is selected, preHeader text will be shown",
         "_category": "content",
         "type": "preheaderLinkOption",
@@ -8503,11 +8518,11 @@
           "value": "@[backgroundColor]",
           "position": {
             "start": {
-              "line": 221,
+              "line": 225,
               "col": 28
             },
             "end": {
-              "line": 221,
+              "line": 225,
               "col": 69
             }
           }
@@ -8564,7 +8579,6 @@
         "externalBackgroundColor": null,
         "backgroundColor": null,
         "image.url": "",
-        "image.alt": "",
         "longTextStyle.face": null,
         "longTextStyle.color": null,
         "longTextStyle.size": null,
@@ -8583,7 +8597,7 @@
         "buttonLink.url": "",
         "image.src": "",
         "titleText": "Title",
-        "longText": "<p>Far far away, behind the word mountains, far from the countries <a href=\"\">Vokalia and Consonantia</a>, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>",
+        "longText": "<p>Far far away, behind the word mountains, far from the countries <a href>Vokalia and Consonantia</a>, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>",
         "buttonLink.text": "BUTTON"
       },
       "customStyle": null,
@@ -9117,9 +9131,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 2
+          "_usecount": 4
         },
-        "_usecount": 10
+        "_usecount": 12
       },
       "longText": {
         "_writeable": false,
@@ -9163,7 +9177,7 @@
         },
         "_usecount": 3
       },
-      "_usecount": 81,
+      "_usecount": 83,
       "id": {
         "_writeable": false,
         "_category": "content",
@@ -9202,11 +9216,11 @@
           "value": "@[backgroundColor]",
           "position": {
             "start": {
-              "line": 221,
+              "line": 225,
               "col": 28
             },
             "end": {
-              "line": 221,
+              "line": 225,
               "col": 69
             }
           }
@@ -9244,7 +9258,7 @@
         "longTextStyle.face": null,
         "longTextStyle.color": null,
         "longTextStyle.size": null,
-        "longText": "<p>Far far away, behind the word mountains, far from the countries <a href=\"\">Vokalia and Consonantia</a>, there live the blind texts.</p>\r\n          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>"
+        "longText": "<p>Far far away, behind the word mountains, far from the countries <a href>Vokalia and Consonantia</a>, there live the blind texts.</p>\n          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>"
       },
       "customStyle": null,
       "_complex": true,
@@ -9445,11 +9459,11 @@
           "value": "@[backgroundColor]",
           "position": {
             "start": {
-              "line": 221,
+              "line": 225,
               "col": 28
             },
             "end": {
-              "line": 221,
+              "line": 225,
               "col": 69
             }
           }
@@ -9506,7 +9520,6 @@
         "externalBackgroundColor": null,
         "backgroundColor": null,
         "image.url": "",
-        "image.alt": "",
         "longTextStyle.face": null,
         "longTextStyle.color": null,
         "longTextStyle.size": null,
@@ -9525,7 +9538,7 @@
         "buttonLink.url": "",
         "image.src": "",
         "text": "Section Title",
-        "longText": "<p>Far far away, behind the word mountains, far from the countries <a href=\"\">Vokalia and Consonantia</a>, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>",
+        "longText": "<p>Far far away, behind the word mountains, far from the countries <a href>Vokalia and Consonantia</a>, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>",
         "buttonLink.text": "BUTTON"
       },
       "customStyle": null,
@@ -10049,9 +10062,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 1
+          "_usecount": 2
         },
-        "_usecount": 5
+        "_usecount": 6
       },
       "longText": {
         "_writeable": false,
@@ -10095,7 +10108,7 @@
         },
         "_usecount": 3
       },
-      "_usecount": 51,
+      "_usecount": 52,
       "id": {
         "_writeable": false,
         "_category": "content",
@@ -10160,11 +10173,11 @@
           "value": "@[backgroundColor]",
           "position": {
             "start": {
-              "line": 221,
+              "line": 225,
               "col": 28
             },
             "end": {
-              "line": 221,
+              "line": 225,
               "col": 69
             }
           }
@@ -10227,7 +10240,6 @@
         "backgroundColor": null,
         "leftImage.url": "",
         "imageHeight": "100",
-        "leftImage.alt": "",
         "longTextStyle.face": null,
         "longTextStyle.color": null,
         "longTextStyle.size": null,
@@ -10245,15 +10257,14 @@
         "buttonStyle.radius": null,
         "leftButtonLink.url": "",
         "rightImage.url": "",
-        "rightImage.alt": "",
         "rightButtonLink.url": "",
         "leftImage.src": "",
         "leftTitleText": "Title",
-        "leftLongText": "<p>Far far away, behind the word mountains, far from the countries <a href=\"\">Vokalia and Consonantia</a>, there live the blind texts.</p>",
+        "leftLongText": "<p>Far far away, behind the word mountains, far from the countries <a href>Vokalia and Consonantia</a>, there live the blind texts.</p>",
         "leftButtonLink.text": "BUTTON",
         "rightImage.src": "",
         "rightTitleText": "Title",
-        "rightLongText": "<p>Far far away, behind the word mountains, far from the countries <a href=\"\">Vokalia and Consonantia</a>, there live the blind texts.</p>",
+        "rightLongText": "<p>Far far away, behind the word mountains, far from the countries <a href>Vokalia and Consonantia</a>, there live the blind texts.</p>",
         "rightButtonLink.text": "BUTTON"
       },
       "customStyle": null,
@@ -10785,9 +10796,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 2
+          "_usecount": 4
         },
-        "_usecount": 10
+        "_usecount": 12
       },
       "leftLongText": {
         "_writeable": false,
@@ -10871,9 +10882,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 2
+          "_usecount": 4
         },
-        "_usecount": 10
+        "_usecount": 12
       },
       "rightLongText": {
         "_writeable": false,
@@ -10917,7 +10928,7 @@
         },
         "_usecount": 3
       },
-      "_usecount": 114,
+      "_usecount": 118,
       "id": {
         "_writeable": false,
         "_category": "content",
@@ -10973,11 +10984,11 @@
           "value": "@[backgroundColor]",
           "position": {
             "start": {
-              "line": 221,
+              "line": 225,
               "col": 28
             },
             "end": {
-              "line": 221,
+              "line": 225,
               "col": 69
             }
           }
@@ -11044,7 +11055,6 @@
         "backgroundColor": null,
         "leftImage.url": "",
         "imageHeight": "90",
-        "leftImage.alt": "",
         "longTextStyle.face": null,
         "longTextStyle.color": null,
         "longTextStyle.size": null,
@@ -11062,22 +11072,20 @@
         "buttonStyle.radius": null,
         "leftButtonLink.url": "",
         "middleImage.url": "",
-        "middleImage.alt": "",
         "middleButtonLink.url": "",
         "rightImage.url": "",
-        "rightImage.alt": "",
         "rightButtonLink.url": "",
         "leftImage.src": "",
         "leftTitleText": "Title",
-        "leftLongText": "<p>Far far away, behind the word mountains, far from the countries <a href=\"\">Vokalia and Consonantia</a>, there live the blind texts.</p>",
+        "leftLongText": "<p>Far far away, behind the word mountains, far from the countries <a href>Vokalia and Consonantia</a>, there live the blind texts.</p>",
         "leftButtonLink.text": "BUTTON",
         "middleImage.src": "",
         "middleTitleText": "Title",
-        "middleLongText": "<p>Far far away, behind the word mountains, far from the countries <a href=\"\">Vokalia and Consonantia</a>, there live the blind texts.</p>",
+        "middleLongText": "<p>Far far away, behind the word mountains, far from the countries <a href>Vokalia and Consonantia</a>, there live the blind texts.</p>",
         "middleButtonLink.text": "BUTTON",
         "rightImage.src": "",
         "rightTitleText": "Title",
-        "rightLongText": "<p>Far far away, behind the word mountains, far from the countries <a href=\"\">Vokalia and Consonantia</a>, there live the blind texts.</p>",
+        "rightLongText": "<p>Far far away, behind the word mountains, far from the countries <a href>Vokalia and Consonantia</a>, there live the blind texts.</p>",
         "rightButtonLink.text": "BUTTON"
       },
       "customStyle": null,
@@ -11609,9 +11617,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 2
+          "_usecount": 4
         },
-        "_usecount": 10
+        "_usecount": 12
       },
       "leftLongText": {
         "_writeable": false,
@@ -11695,9 +11703,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 2
+          "_usecount": 4
         },
-        "_usecount": 10
+        "_usecount": 12
       },
       "middleLongText": {
         "_writeable": false,
@@ -11781,9 +11789,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 2
+          "_usecount": 4
         },
-        "_usecount": 10
+        "_usecount": 12
       },
       "rightLongText": {
         "_writeable": false,
@@ -11827,7 +11835,7 @@
         },
         "_usecount": 3
       },
-      "_usecount": 168,
+      "_usecount": 174,
       "id": {
         "_writeable": false,
         "_category": "content",
@@ -12033,11 +12041,11 @@
           "value": "@[externalBackgroundColor]",
           "position": {
             "start": {
-              "line": 208,
+              "line": 212,
               "col": 27
             },
             "end": {
-              "line": 208,
+              "line": 212,
               "col": 76
             }
           }
@@ -12074,7 +12082,6 @@
         "id": "",
         "externalBackgroundColor": null,
         "image.url": "",
-        "image.alt": "",
         "externalTextStyle.face": null,
         "externalTextStyle.color": null,
         "externalTextStyle.size": null,
@@ -12135,9 +12142,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 2
+          "_usecount": 4
         },
-        "_usecount": 10
+        "_usecount": 12
       },
       "imageWidth": {
         "_writeable": false,
@@ -12157,7 +12164,7 @@
         "_initialized": true,
         "_usecount": 1
       },
-      "_usecount": 33,
+      "_usecount": 35,
       "externalBackgroundColor": {
         "_writeable": false,
         "_name": "External Background",
@@ -12442,11 +12449,11 @@
           "value": "@[backgroundColor]",
           "position": {
             "start": {
-              "line": 221,
+              "line": 225,
               "col": 28
             },
             "end": {
-              "line": 221,
+              "line": 225,
               "col": 69
             }
           }
@@ -12805,7 +12812,6 @@
         "externalBackgroundColor": null,
         "backgroundColor": null,
         "image.url": "",
-        "image.alt": "",
         "longTextStyle.face": null,
         "longTextStyle.color": null,
         "longTextStyle.size": null,
@@ -12959,7 +12965,7 @@
         },
         "_usecount": 7
       },
-      "_usecount": 26,
+      "_usecount": 28,
       "id": {
         "_writeable": false,
         "_category": "content",
@@ -13026,9 +13032,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 2
+          "_usecount": 4
         },
-        "_usecount": 10
+        "_usecount": 12
       }
     },
     "doubleImageBlock longTextStyle": {
@@ -13202,12 +13208,10 @@
         "backgroundColor": null,
         "leftImage.url": "",
         "imageHeight": "180",
-        "leftImage.alt": "",
         "longTextStyle.face": null,
         "longTextStyle.color": null,
         "longTextStyle.size": null,
         "rightImage.url": "",
-        "rightImage.alt": "",
         "leftImage.src": "",
         "rightImage.src": ""
       },
@@ -13368,7 +13372,7 @@
         },
         "_usecount": 25
       },
-      "_usecount": 86,
+      "_usecount": 94,
       "id": {
         "_writeable": false,
         "_category": "content",
@@ -13435,9 +13439,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 4
+          "_usecount": 8
         },
-        "_usecount": 20
+        "_usecount": 24
       },
       "imageHeight": {
         "_writeable": false,
@@ -13488,9 +13492,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 4
+          "_usecount": 8
         },
-        "_usecount": 20
+        "_usecount": 24
       }
     },
     "tripleImageBlock longTextStyle": {
@@ -13665,14 +13669,11 @@
         "backgroundColor": null,
         "leftImage.url": "",
         "imageHeight": "160",
-        "leftImage.alt": "",
         "longTextStyle.face": null,
         "longTextStyle.color": null,
         "longTextStyle.size": null,
         "middleImage.url": "",
-        "middleImage.alt": "",
         "rightImage.url": "",
-        "rightImage.alt": "",
         "leftImage.src": "",
         "middleImage.src": "",
         "rightImage.src": ""
@@ -13834,7 +13835,7 @@
         },
         "_usecount": 37
       },
-      "_usecount": 124,
+      "_usecount": 136,
       "id": {
         "_writeable": false,
         "_category": "content",
@@ -13901,9 +13902,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 4
+          "_usecount": 8
         },
-        "_usecount": 20
+        "_usecount": 24
       },
       "imageHeight": {
         "_writeable": false,
@@ -13954,9 +13955,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 4
+          "_usecount": 8
         },
-        "_usecount": 20
+        "_usecount": 24
       },
       "rightImage": {
         "_writeable": false,
@@ -13998,9 +13999,9 @@
           "_category": "content",
           "type": "alt",
           "_initialized": true,
-          "_usecount": 4
+          "_usecount": 8
         },
-        "_usecount": 20
+        "_usecount": 24
       }
     },
     "buttonBlock": {
@@ -14015,11 +14016,11 @@
           "value": "@[backgroundColor]",
           "position": {
             "start": {
-              "line": 221,
+              "line": 225,
               "col": 28
             },
             "end": {
-              "line": 221,
+              "line": 225,
               "col": 69
             }
           }
@@ -14320,11 +14321,11 @@
           "value": "@[backgroundColor]",
           "position": {
             "start": {
-              "line": 221,
+              "line": 225,
               "col": 28
             },
             "end": {
-              "line": 221,
+              "line": 225,
               "col": 69
             }
           }
@@ -14366,7 +14367,7 @@
         "_initialized": true,
         "_usecount": 1
       },
-      "_usecount": 10,
+      "_usecount": 11,
       "externalBackgroundColor": {
         "_writeable": false,
         "_name": "External Background",
@@ -14488,9 +14489,9 @@
           "_category": "content",
           "type": "hrHeight",
           "_initialized": true,
-          "_usecount": 2
+          "_usecount": 3
         },
-        "_usecount": 5
+        "_usecount": 6
       }
     },
     "spacerBlock": {
@@ -14505,11 +14506,11 @@
           "value": "@[externalBackgroundColor]",
           "position": {
             "start": {
-              "line": 208,
+              "line": 212,
               "col": 27
             },
             "end": {
-              "line": 208,
+              "line": 212,
               "col": 76
             }
           }
@@ -14756,5 +14757,5 @@
       "container": "mainBlocks"
     }
   ],
-  "version": "1.1.16"
+  "version": "1.1.19"
 }

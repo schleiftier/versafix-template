@@ -16,7 +16,7 @@
       "size": null,
       "decoration": null
     },
-    "preheaderLinkOption": "[unsubscribe_link]",
+    "preheaderLinkOption": "[LINK_UNSUBSCRIBE]",
     "longTextStyle": {
       "type": "longTextStyle",
       "face": null,
@@ -28,13 +28,6 @@
     },
     "unsubscribeText": "Unsubscribe",
     "webversionText": "View in your browser"
-  },
-  "sponsor": {
-    "type": "sponsor",
-    "visible": true,
-    "src": "img/sponsor.gif",
-    "url": "",
-    "alt": "sponsor"
   },
   "footerBlock": {
     "type": "footerBlock",
@@ -57,7 +50,7 @@
       "size": null,
       "decoration": null
     },
-    "longText": "<p>Email sent to <a href=\"mailto:[mail]\">[mail]</a></p>",
+    "longText": "<p>Email sent to <a href=\"mailto:[EMAIL]\">[EMAIL]</a></p>",
     "disiscrivitiText": "Unsubscribe"
   },
   "mainBlocks": {

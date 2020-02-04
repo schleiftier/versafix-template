@@ -49,7 +49,7 @@
       preheaderLinkOption {
         label: Unsubscribe Link;
         widget: select;
-        options: [profile_link]=Profile|[unsubscribe_link]=Unsubscribe|none=None;
+        options: [profile_link]=Profile|[LINK_UNSUBSCRIBE]=Unsubscribe|none=None;
         help: If -None- is selected, preHeader text will be shown;
       }
      
@@ -810,11 +810,11 @@
       <block-inner inner-padding="0" inner-class="vb-row">
         <columns td-styles="padding: 0 9px"><!--
           --><column-content width="276" spacing="9">
-            <linked-text if="preheaderLinkOption neq 'none'" href="[unsubscribe_link]" href-prop="preheaderLinkOption" editable="unsubscribeText">Unsubscribe</linked-text>
+            <linked-text if="preheaderLinkOption neq 'none'" href="[LINK_UNSUBSCRIBE]" href-prop="preheaderLinkOption" editable="unsubscribeText">Unsubscribe</linked-text>
             <text false if="preheaderLinkOption eq 'none'" content="preheaderText"></text>
           </column-content><!--
           --><column-content width="276" spacing="9" class="mobile-hide">
-            <linked-text align="right" href="[show_link]" editable="webversionText">View in your browser</linked-text>
+            <linked-text align="right" href="[LINK_BROWSER]" editable="webversionText">View in your browser</linked-text>
           </column-content><!--
         --></columns>
       </block-inner>
@@ -1084,10 +1084,9 @@
   <block name="footerBlock" label="Unsubscribe Block" theme="frameTheme">
     <block-inner inner-padding="0" inner-class="vb-row">
       <content spacing="9" width="552" td-styles="padding: 0 9px">
-        <long-text editable="longText" fixed-align="center"><p>Email sent to <a href="mailto:[mail]">[mail]</a></p></long-text>
-        <linked-text align="center" href="[unsubscribe_link]" editable="disiscrivitiText"
+        <long-text editable="longText" fixed-align="center"><p>Email sent to <a href="mailto:[EMAIL]">[EMAIL]</a></p></long-text>
+        <linked-text align="center" href="[LINK_UNSUBSCRIBE]" editable="disiscrivitiText"
           color-prop="Color.readability(linkStyle.color, backgroundColor) gt 2 ? linkStyle.color : (Color.isReadable('#ffffff', backgroundColor) ? '#ffffff' : '#000000')">Unsubscribe</linked-text>
-        <linked-img width="170" align="center" false if="_root_.sponsor.visible" content="_root_.sponsor" src="img/sponsor.gif" alt="sponsor" />
       </content>
     </block-inner>
   </block>
